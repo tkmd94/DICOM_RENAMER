@@ -13,5 +13,21 @@ namespace DICOM_RENAMER
     /// </summary>
     public partial class App : Application
     {
+        private  void ApplicationStartup(object sender, StartupEventArgs e)
+        {
+
+            // コマンドライン引数を取得します
+            string[] args = e.Args;
+            if (args.Length > 0)
+            {
+                var result = DicomRename.RenameProcess(args);
+                Application.Current.Shutdown();
+            }
+            else
+            {
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+            }
+        }
     }
 }
