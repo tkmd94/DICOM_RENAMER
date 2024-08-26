@@ -49,4 +49,4 @@ None
 
 # License
 
-"DICOM_RENAMER" is licensed under the MIT License.
+"DICOM_RENAMER" is licensed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License) .
