@@ -12,9 +12,8 @@ Utilizes DICOM file metadata to automatically generate filenames, making file or
 * **Filename Generation and Renaming**:
   * Generates new filenames based on the metadata of DICOM files.
   * For Modality "RTPLAN", creates a new filename using RTPlanLabel.
-  * For Modality "RTDOSE", explores related RTPLAN files to obtain the appropriate RTPlanLabel and generates the filename.
+  * For Modality "RTDOSE", explores related RTPLAN files to obtain the appropriate RTPlanLabel and generates the filename. The folder structure searched is specialized for SunNuClear software.
   * Renames files with the newly generated filenames.
-  * Specialized for the folder hierarchy structure of SunNuClear software.
 
 # Demo
 
@@ -29,7 +28,7 @@ None
 1. Copy the folder containing DICOM_RENAMER.exe to any location on your PC.
 2. Open Windows Explorer, type "shell:sendto" in the address bar, and the SendTo folder will open.
 3. Create a shortcut for DICOM_RENAMER.exe within the DICOM_RENAMER folder and save it in the SendTo folder.
-
+   
 # Usage
 
 **Note: Use this source code at your own risk.**
@@ -44,9 +43,9 @@ None
 2. Verify that the selected files have been renamed correctly.
 
 # Author
-
+ 
 * Takashi Kodama
-
+ 
 # License
 
 "DICOM_RENAMER" is licensed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License) .
