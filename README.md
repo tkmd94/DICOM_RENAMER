@@ -13,9 +13,8 @@ DICOMファイルのメタデータを利用してファイル名を自動生成
 * ファイル名の生成とリネーム:
   * DICOMファイルのメタデータに基づいて、新しいファイル名を生成します。
   * Modalityが"RTPLAN"の場合は、RTPlanLabelを使って新しいファイル名を作成します。
-  * Modalityが"RTDOSE"の場合は、関連するRTPLANファイルを探索し、適切なRTPlanLabelを取得して、ファイル名を生成します。
+  * Modalityが"RTDOSE"の場合は、関連するRTPLANファイルを探索し、適切なRTPlanLabelを取得して、ファイル名を生成します。検索するフォルダ構造はSunNuClear社ソフトウェアに特化しています。
   * 新しいファイル名が生成されると、その名前でファイルをリネームします。
-  * SunNuClear社ソフトウェアのフォルダ階層構造に特化しています。
 
 # Demo
 
@@ -52,4 +51,4 @@ DICOMファイルのメタデータを利用してファイル名を自動生成
  
 # License
 
-"DICOM_RENAMER" は [MIT ライセンス] の下にあります。
+"DICOM_RENAMER" は [MIT ライセンス](https://en.wikipedia.org/wiki/MIT_License)  の下にあります。
