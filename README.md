@@ -26,7 +26,7 @@ DICOMファイルのメタデータを利用してファイル名を自動生成
 
 # Installation
 
-1. DICOM_RENAMER.exeを含むPDF_RENAMERフォルダをPCの任意の場所にコピーする。
+1. DICOM_RENAMER.exeを含むDICOM_RENAMERフォルダをPCの任意の場所にコピーする。
 3. エクスプローラーを起動し、アドレスバーに「shell:sendto」と入力すると、SendToフォルダが開かれる。
 4. DICOM_RENAMERフォルダ内のDICOM_RENAMER.exeのショートカットを作成し、SendToフォルダに保存する。
    
