@@ -12,7 +12,7 @@ Utilizes DICOM file metadata to automatically generate filenames, making file or
 * **Filename Generation and Renaming**:
   * Generates new filenames based on the metadata of DICOM files.
   * For Modality "RTPLAN", creates a new filename using RTPlanLabel.
-  * For Modality "RTDOSE", explores related RTPLAN files to obtain the appropriate RTPlanLabel and generates the filename. The folder structure searched is specialized for SunNuClear software.
+  * For Modality "RTDOSE", explores related RTPLAN files to obtain the appropriate RTPlanLabel and generates the filename. The folder structure searched is specialized for SunNuclear software.
   * Renames files with the newly generated filenames.
 
 # Demo
