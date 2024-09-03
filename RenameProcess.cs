@@ -27,19 +27,8 @@ namespace DICOM_RENAMER
                     var patientName = dcm.FindFirst(TagHelper.PatientName)?.DData.ToString();
                     var planId = dcm.FindFirst(TagHelper.RTPlanLabel)?.DData.ToString();
                     var modality = dcm.FindFirst(TagHelper.Modality)?.DData.ToString();
-                    var refBeamNo = dcm.FindFirst(TagHelper.ReferencedBeamNumber)?.DData.ToString();
-                    if (refBeamNo == null)
-                    {
-                        refBeamNo = "_PD";
-                    }
-                    else
-                    {
-                        refBeamNo = "_F" + refBeamNo;
-                    }
 
                     var newFileName = "";
-                    // 結果を表示（ここではコンソールに出力していますが、UIに適宜表示してください）
-
                     var oldFileName = Path.GetFileName(file);
                     var filePath = Path.GetDirectoryName(file);
                     if (modality == "RTPLAN")
@@ -49,6 +38,16 @@ namespace DICOM_RENAMER
                     }
                     else if (modality == "RTDOSE")
                     {
+                        var refBeamNo = dcm.FindFirst(TagHelper.ReferencedBeamNumber)?.DData.ToString();
+                        if (refBeamNo == null)
+                        {
+                            refBeamNo = "_PD";
+                        }
+                        else
+                        {
+                            refBeamNo = "_F" + refBeamNo;
+                        }
+                        
                         var refSOPInstanceUID = dcm.FindFirst(TagHelper.ReferencedSOPInstanceUID)?.DData.ToString();
                         Console.WriteLine($"refSOPInstanceUID:{refSOPInstanceUID}");
                         var parenPath = new DirectoryInfo(file).Parent.Parent.FullName;
